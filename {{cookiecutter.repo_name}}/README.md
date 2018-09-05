@@ -1,4 +1,4 @@
-{{cookie_cutter.repo_name}}
+{{cookiecutter.repo_name}}
 ================
 
 A repo to use to provide a common starting point for Exploratory Data Science Projects.
