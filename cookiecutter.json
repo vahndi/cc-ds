@@ -1,0 +1,5 @@
+{
+    "repo_name": "my_data_science_repo",
+    "platform": ["osx", "lnx", "win"],
+    "env_name": "my_data_science__env"
+}
