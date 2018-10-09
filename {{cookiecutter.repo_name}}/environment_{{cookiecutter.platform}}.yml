@@ -1,4 +1,4 @@
-name: {{cookiecutter.env_name}}}
+name: {{cookiecutter.env_name}}
 channels:
   - defaults
 dependencies:
