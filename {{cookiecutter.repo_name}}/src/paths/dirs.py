@@ -1,22 +1,22 @@
-from os.path import abspath, join, pardir
-
+from pathlib import Path
 
 # project
-DIR_PROJECT = abspath(join(__file__, pardir, pardir, pardir))
+DIR_PROJECT = Path(__file__)
+while DIR_PROJECT.name != '{{cookiecutter.repo_name}}':
+    DIR_PROJECT = DIR_PROJECT.parent
 
 # data
-DIR_DATA = join(DIR_PROJECT, 'data')
-DIR_DATA_EXTERNAL = join(DIR_DATA, 'external')
-DIR_DATA_INTERIM = join(DIR_DATA, 'interim')
-DIR_DATA_PROCESSED = join(DIR_DATA, 'processed')
-DIR_DATA_RAW = join(DIR_DATA, 'raw')
+DIR_DATA = DIR_PROJECT / 'data'
+DIR_DATA_EXTERNAL = DIR_DATA / 'external'
+DIR_DATA_INTERIM = DIR_DATA / 'interim'
+DIR_DATA_PROCESSED = DIR_DATA / 'processed'
+DIR_DATA_RAW = DIR_DATA / 'raw'
 
 # models
-DIR_MODELS = join(DIR_PROJECT, 'models')
+DIR_MODELS = DIR_PROJECT / 'models'
 
 # notebooks
-DIR_NOTEBOOKS = join(DIR_PROJECT, 'notebooks')
+DIR_NOTEBOOKS = DIR_PROJECT / 'notebooks'
 
-# reports & figures
-DIR_REPORTS = join(DIR_PROJECT, 'reports')
-DIR_REPORTS_FIGURES = join(DIR_REPORTS, 'figures')
+# figures
+DIR_FIGURES = DIR_PROJECT / 'figures'
